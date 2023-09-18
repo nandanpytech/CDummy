@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap');
+
+:root {
+    --normal-black:#000;
+    --normal-black1:#000000CC;
+    --box-shadow1:#000000;
+    --extra-bold:800;
+    --yellow-gradient:linear-gradient(90deg, #FFE185 -9.01%, #FCC200 127.45%);
+    --rotate-bars:rotate(180deg);
+    --card-boxshadow :0px 12px 14px 0px rgba(0, 0, 0, 0.07);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+  /* To Hide scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+  
+.htext{
+   color:var(--normal-black);
+}
+
+.htext1{
+    color: var(--normal-black1);
+}
+
+ul{
+    text-decoration: none;
+} 
+
+.number_scroll{
+    list-style-type: none;
+}
+
+.extra-bold{
+    font-weight: 800;
+}
+
+.custom_shadow{
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.20);
+}
+.round_horizontal_bar1{
+    border-radius: 0px 15px 15px 0px;
+    background:var(--yellow-gradient);
+    transform: var(--rotate-bars) ;
+    transition: all .5s ease-in-out;
+}
+.round_horizontal_bar2{
+    border-radius: 0px 15px 15px 0px;
+    background:var(--yellow-gradient);
+    transition: all .5s ease-in-out;
+}
+
+.square-bars{
+    border-radius: 0%;
+}
+.quarter{
+    opacity: 100;
+    transition: all .5 ease-in-out;
+}
+.project{
+    box-shadow: var(--card-boxshadow);
+}
+
+
+/* navbar */
+.nav_header{
+    width: 100%;
+    box-shadow: 0px 2px 4px -2px #00000029;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.arrow-back{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+
+/* cards  */
+.card_name{
+    border:.4px solid rgba(0, 0, 0, 0.30) ;
+    box-shadow: var(--card-boxshadow);
+}
+.chart_days{
+    display: flex;
+    flex-direction: column-reverse;
+}   
+
+.chart_bars{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    position: absolute;
+    bottom: 8px;
+    left: 17px;
+}
+
+
+.rp-joined-count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: var(--normal-black);
+    font-weight: 600;
+    width: 62.5px;
+    height: 12.25px;
+    position: absolute;
+    left: 48px;
+    top: 0;
+    background: #FFDF7A;
+}
+
+.commission_graph {
+    border: .5px solid var(--normal-black);
+}
+
+.commission-monthly{
+    border: .5px solid var(--normal-black);
+}
+
+.chart_bars .bar{
+    width: 30px;
+    height: 4px;
+    background: var(--normal-black);
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+}
+
+
+.community_container{
+    border: 1px solid var(--normal-black);
+}
+
+.present_year_container{
+    margin-top: 15px;
+    margin-right: 16px;
+    position: relative;
+    float: right;
+    border-radius: 2px;
+    border: 1px solid var(--normal-black);
+}
+
+.present_year{
+    background-color: #262626;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    display: flex;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.present_year_closure{
+    background-color: #262626;
+    display: flex;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-right: 16px;
+    float: right;
+}
+
+
+/* Evolution  */
+.evolution_desc{
+    padding: 5px 0px 5px 20px;
+    margin:16px 16px;
+    background:var(--normal-black);
+    box-shadow: var(--box-shadow1);
+}
+.evolution_text{
+    background: var(--yellow-gradient);
+    background-clip: text;
+}
+
+/* auto_scroll_text  */
+
+.auto_scroll_text{
+    width: 100%;
+    /* margin-left: 16px; */
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--normal-black);
+}
+
+.auto_scroll_text p{
+    font-weight: 400;
+    color: var(--box-shadow1);
+}
+
+.plus{
+    height: inherit;
+}
+
+.number_scroll{
+    height: inherit;
+}
+.number_scroll > div {
+    height: inherit;
+}
+
+/* semi-circular bar  */
+
+.semi_circle_bar{
+    width: 150px;
+    height: 58px;
+}
+
+.number_scroll{
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 50px; 
+    transition: scroll-behavior 2s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+.counter_up{
+    display: flex;
+}
+
+@media screen and (min-width:400px) {
+    .App{
+        width: 100%;
+    }
+    .nav_header{
+        width: 100%;
+    }
+}
+
